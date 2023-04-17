@@ -9,6 +9,7 @@ def bubble_sort(array):
         array[inner] = array[inner + 1]
         array[inner + 1] = temp
 
+
 l  = [0, 5, 7, 3, 1, 4, 8, 2, 9, 6]
 
 bubble_sort(l)
