@@ -7,6 +7,8 @@
 
 ### Comb Sort
 
+### Odd-Even Sort
+
 ## Advanced
 ### Insertion Sort
 
