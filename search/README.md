@@ -8,3 +8,5 @@
 ## Exponential Search
 
 ## Interpolation Search
+
+## Ternary Search
