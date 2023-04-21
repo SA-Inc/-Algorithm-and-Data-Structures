@@ -1,3 +1,27 @@
+# clockwise 90
+# transpose
+# reverse rows
+
+# counterclockwise -90 (2 ways)
+# transpose
+# reverse cols (a little bit difficult)
+# or
+# reverse rows
+# transpose
+
+# clockwise 180
+# rotate clockwise twice
+# or
+# reverse rows and then cols (transpose)
+
+# counterclockwise -180
+# rotate counterclockwise twice
+# or
+# reverse cols and then rows
+# or
+# clockwise 180 (result the same)
+
+
 image = [
   [1,2,3],
   [4,5,6],
