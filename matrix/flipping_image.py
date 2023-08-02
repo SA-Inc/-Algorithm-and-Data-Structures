@@ -1,30 +1,34 @@
 # https://leetcode.com/problems/flipping-an-image/
 
-def flip_and_invert(image):
-  n = len(image) # matrix size n*n
-  m = n // 2 # middle row index
+# image must be square
+# 1. reverse each row
+# 2. invert each row
 
-  for r in range(0, n, 1):
-    i = 0
-    j = n - 1
+def flip_and_invert(image):
+  size = len(image) # matrix size n*n
+  mid = size // 2 # middle row index
+
+  for row in range(0, size, 1):
+    left = 0
+    right = size - 1
 
     # inplace swap and flip bit
-    while(i < j):
-      temp = image[r][i]
-      image[r][i] = image[r][j]
-      image[r][i] = (image[r][i] + 1) % 2
+    while(left < right):
+      temp = image[row][left]
+      image[row][left] = image[row][right] # swap
+      image[row][left] = (image[row][left] + 1) % 2 # flip
 
-      image[r][j] = temp
-      image[r][j] = (image[r][j] + 1) % 2
+      image[row][right] = temp # swap
+      image[row][right] = (image[row][right] + 1) % 2 # flip
 
-      i += 1
-      j -= 1
+      left += 1
+      right -= 1
 
     # handle if row len is odd
-    if(n % 2 != 0):
-      image[r][m] = (image[r][m] + 1) % 2
+    if(size % 2 != 0):
+      image[row][mid] = (image[row][mid] + 1) % 2
 
   return image
 
 
-print(flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]]))
+print(flip_and_invert([[1,1,0],[1,0,1],[0,0,0]]))
