@@ -1,4 +1,8 @@
 # grid must be square
+# primary
+# (i == j)
+# secondary
+# (i + j == n - 1) 
 
 board = [
   [5, 3, 4, 6, 7, 8, 9, 1, 2],
