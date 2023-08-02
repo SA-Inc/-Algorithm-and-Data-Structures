@@ -38,8 +38,25 @@ def check_block(board, row, col, size):
       print(board[block_row][block_col])
 
 
+def check_row_skip_start(board, row):
+  cols = len(board[0])
+  for sub_col in range(0, cols, 1):
+    if(row != sub_col):
+      print(board[row][sub_col])
+
+
+def check_col_skip_start(board, col):
+  rows = len(board)
+  for sub_row in range(0, rows, 1):
+    if(col != sub_row):
+      print(board[sub_row][col])
+
 check_row(board, 1)
 
 check_col(board, 1)
 
 check_block(board, 3, 3, 2)
+
+check_row_skip_start(board, 1)
+
+check_col_skip_start(board, 1)
