@@ -1,3 +1,5 @@
+# search starts from top right corner (row = 0 and col = n - 1)
+
 def binary_search_matrix(matrix, target):
   row = 0
   col = len(matrix[0]) - 1
