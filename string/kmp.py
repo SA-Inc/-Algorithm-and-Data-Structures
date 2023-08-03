@@ -1,3 +1,5 @@
+# NEED TO CHECK
+
 def get_lps(s):
   # LPS - Longest Proper Prefix
   lps = [0] * len(s)
