@@ -1,3 +1,24 @@
+# middle partition (NOT WORKING, NEED CHECK)
+def mid_partition(array, left, right):
+  mid = int((left + right) // 2)
+
+  if(array[left] > array[mid]):
+    temp = array[left]
+    array[left] = array[mid]
+    array[mid] = temp
+  if(array[left] > array[right]):
+    temp = array[left]
+    array[left] = array[right]
+    array[right] = temp
+  if(array[mid] < array[right]):
+    temp = array[mid]
+    array[mid] = array[right]
+    array[right] = temp
+
+  # return array[right]
+  return mid
+
+
 # lomuto partition
 
 def partition(array, left, right):
