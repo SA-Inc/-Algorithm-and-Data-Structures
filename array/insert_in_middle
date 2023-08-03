@@ -1,0 +1,16 @@
+def encapsulate(value, sequence):
+  if type(sequence) == type(""):
+    return str(value)
+  if type(sequence) == type([]):
+    return [value]
+  return (value,)
+
+
+def insert_in_middle(value, sequence):
+  middle = len(sequence) // 2
+  return sequence[:middle] + encapsulate(value, sequence) + sequence[middle:]
+
+
+l = ['a', 'b', 'd', 'e']
+t = ('a', 'b', 'd', 'e')
+s = 'abde'
