@@ -4,6 +4,8 @@
 # 3. if mid index element > target, move right index by 1
 # 4. return left index, because near to 0 index
 
+# log2N = search steps
+
 def binary_search(array, search):
   left_index = 0
   right_index = len(array) - 1
