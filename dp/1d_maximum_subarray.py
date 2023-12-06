@@ -28,6 +28,20 @@ def kadane(array):
   return (left, right, max_sum)
 
 
+def kadane_dp(array):
+  n = len(array)
+  dp = [0] * n
+  dp[0] = array[0]
+  max_sum = 0
+
+  for i in range(0, n, 1):
+    dp[i] = max(array[i], array[i] + dp[i - 1])
+    max_sum = max(max_sum, dp[i])
+
+  return max_sum
+
+
 a = [-1, 2, -2, 5, 7, -3, 1]
 
-print(kadane(a))
+# print(kadane(a))
+print(kadane_dp(a))
