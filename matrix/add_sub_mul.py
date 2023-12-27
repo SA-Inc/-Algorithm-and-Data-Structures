@@ -30,6 +30,17 @@ def transpose(m):
   return result
 
 
+def matrix_scalar_mul(matrix, value):
+  rows = len(matrix)
+  cols = len(matrix[0])
+
+  for row in range(0, rows, 1):
+    for col in range(0, cols, 1):
+      matrix[row][col] *= value
+
+  return matrix
+
+
 def matrix_mul(m, n):
   rows_m = len(m)
   cols_m = len(m[0])
